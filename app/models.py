@@ -7,8 +7,8 @@ class User(models.Model):
   phone_number = models.CharField(max_length=20, blank=True, null=True)
 
 class Address(models.Model):
-  user_cpf = models.ForeignKey(User, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
   city = models.CharField(max_length=50, blank=True, null=True)
-  neigborhood = models.CharField(max_length=50, blank=True, null=True)
+  neighborhood = models.CharField(max_length=50, blank=True, null=True)
   street = models.CharField(max_length=50, blank=True, null=True)
   house_number = models.CharField(max_length=5, blank=True, null=True)

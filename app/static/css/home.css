@@ -78,3 +78,17 @@ td {
   background: #fff;
   border-radius: 4px;
 }
+
+.edit {
+  border: none;
+  background: #fff;
+  color: #0e4362;
+  font-size: 16px;
+}
+
+.delete {
+  border: none;
+  background: #fff;
+  color: #d02b2f;
+  font-size: 16px;
+}

@@ -27,29 +27,29 @@
     </thead>
 
     <tbody>
-      <tr>
-        <td>Lucas Costa dos Prazeres</td>
-        <td>Adriana Cristina de Almeida Costa</td>
-        <td>018.462.442-85</td>
-        <td>Rua Triunvirato, 558 - Cidade Velha - Belém</td>
-        <td>(91) 99280-9380</td>
-      </tr>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.full_name }}</td>
+          <td>{{ user.mother_name }}</td>
+          <td>{{ user.cpf }}</td>
+          <td>
+            {{ user.street }}, {{ user.house_number }} - {{ user.neighborhood }} - {{ user.city }}
+          </td>
+          <td>{{ user.phone_number }}</td>
 
-      <tr>
-        <td>Lucas Costa dos Prazeres</td>
-        <td>Adriana Cristina de Almeida Costa</td>
-        <td>018.462.442-85</td>
-        <td>Rua Triunvirato, 558 - Cidade Velha - Belém</td>
-        <td>(91) 99280-9380</td>
-      </tr>
+          <td>
+            <button class="edit" type="buton">
+              <i class="fa-solid fa-user-pen"></i>
+            </button>
+          </td>
 
-      <tr>
-        <td>Lucas Costa dos Prazeres</td>
-        <td>Adriana Cristina de Almeida Costa</td>
-        <td>018.462.442-85</td>
-        <td>Rua Triunvirato, 558 - Cidade Velha - Belém</td>
-        <td>(91) 99280-9380</td>
-      </tr>
+          <td>
+            <button class="delete" type="buton">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        </tr>
+      {% endfor %}
     </tbody>
   </table>
 </main>
