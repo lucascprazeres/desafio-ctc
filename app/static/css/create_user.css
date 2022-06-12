@@ -1,0 +1,111 @@
+#register-header {
+  background: var(--blue);
+  height: 280px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 64px;
+}
+
+#register-header a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  background: var(--blue-light);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+#register-content {
+  margin-top: -160px;
+  margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+}
+
+#register-content h1 {
+  color: #fff;
+  width: 900px;
+  margin-bottom: 32px;
+}
+
+#register-form {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 900px;
+}
+
+#register-form fieldset {
+  border: 0;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#register-form fieldset legend{
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--blue);
+  width: 100%; 
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.register-input-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.register-address {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.register-input-block label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.register-input-block input {
+  border: 0;
+  border-radius: 4px;
+  background: var(--background);
+  height: 40px;
+  padding: 16px;
+  font-size: 16px;
+}
+
+#street-block {
+  flex: 1;
+}
+
+#house-number-block {
+  flex: 0;
+  width: 160px;
+}
+
+#register-button {
+  border: 0;
+  border-radius: 8px;
+  height: 56px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--green);
+}
