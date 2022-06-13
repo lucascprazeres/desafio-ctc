@@ -12,6 +12,20 @@ def user(request):
 
   return render(request, 'app/user.html', context)
 
+def search_user(request):
+  if request.method == 'POST':
+    searched_cpf = request.POST['searched']
+
+    users = User.objects.filter(cpf__contains=searched_cpf)
+
+    context = {
+      'users': users
+    }
+    
+    return render(request, 'app/user.html', context)
+  
+  return redirect('user')
+
 def create_user(request):
   form = UserForm(request.POST or None)
 
