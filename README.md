@@ -7,13 +7,13 @@ Essa aplicação é a solução para o desafio proposto em um processo seletivo,
 ## Tecnologias utilizadas
 
 - HTML + CSS (GUI)
-- Python
-- Django
-- PostgreSQL
+- [Python](https://www.python.org/)
+- [Django](https://docs.djangoproject.com/en/4.0/)
+- [PostgreSQL](https://www.postgresql.org/docs/)
 
 ## Requisitos
 
-Para rodar essa apliação, você precisa possuir a linguagem [Python]() em sua máquina, bem como um banco [PostgreSQL](). Uma vez configurado o seu ambiente.
+Para rodar essa apliação, você precisa possuir a linguagem Python em sua máquina, bem como um banco PostgreSQL. Uma vez configurado o seu ambiente.
 
 ## Como executar?
  
