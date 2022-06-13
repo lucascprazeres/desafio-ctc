@@ -44,3 +44,9 @@ def edit_user(request, user_id):
   }
 
   return render(request, 'app/edit_user.html', context)
+
+def delete_user(request, user_id):
+  user = User.objects.get(pk=user_id)
+  user.delete()
+
+  return redirect('user')
