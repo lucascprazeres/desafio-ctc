@@ -18,14 +18,29 @@ def create_user(request):
   if request.POST:
     if form.is_valid():
       user = form.save(commit=False)
-      print(user)
       user.save()
       return redirect('user')
-    else:
-      print('invalid')
 
   context = {
     'form': form
   }
 
   return render(request, 'app/create_user.html', context)
+
+def edit_user(request, user_id):
+  user = User.objects.get(pk=user_id)
+
+  form = UserForm(request.POST or None, instance=user)
+
+  if request.POST:
+    if form.is_valid():
+      user = form.save(commit=False)
+      user.save()
+      return redirect('user')
+
+  context = {
+    'form': form,
+    'user_id': user_id
+  }
+
+  return render(request, 'app/edit_user.html', context)

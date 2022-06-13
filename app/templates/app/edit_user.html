@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<header id="register-header">
+  <a href="{% url 'user' %}">
+    <i class="fa-solid fa-arrow-left"></i>
+  </a>
+</header>
+
+<main id="register-content">
+  <h1>Atualize os dados da pessoa selecionada.</h1>
+
+  <form action="{% url 'edit_user' user_id %}" method="post" id="register-form">
+    {% csrf_token %}
+
+    
+    <fieldset>
+      <legend>Dados pessoais</legend>
+
+      <div class="register-input-block">
+        <label for="{{ form.full_name.id_for_label }}">Nome completo*</label>
+        {{ form.full_name }}
+      </div>
+
+      <div class="register-input-block">
+        <label for="{{ form.mother_name.id_for_label }}">Nome da mãe*</label>
+        {{ form.mother_name }}
+      </div>
+
+      <div class="register-input-block">
+        <label for="{{ form.cpf.id_for_label }}">Seu CPF</label>
+        {{ form.cpf }}
+      </div>
+
+      <div class="register-input-block">
+        <label for="{{ form.phone_number.id_for_label }}">Número de telefone</label>
+        {{ form.phone_number }}
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Endereço</legend>
+
+      <div class="register-address">
+        <div class="register-input-block">
+          <label for="{{ form.city.id_for_label }}">Cidade</label>
+          {{ form.city }}
+        </div>
+
+        <div class="register-input-block">
+          <label for="{{ form.neighbohood.id_for_label }}">Bairro</label>
+          {{ form.neighborhood }}
+        </div>
+      </div>
+
+      <div class="register-address">
+        <div class="register-input-block" id="street-block">
+          <label for="{{ form.street.id_for_label }}">Rua</label>
+          {{ form.street }}
+        </div>
+
+        <div class="register-input-block" id="house-number-block">
+          <label for="{{ form.house_number.id_for_label }}">Número</label>
+          {{ form.house_number }}
+        </div>
+      </div>
+    </fieldset>
+    <button id="register-button" type="submit">Atualizar pessoa</button>
+  </form>
+</main>
+
+{% endblock %}
